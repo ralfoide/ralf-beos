@@ -1,0 +1,183 @@
+========================================================================
+         File: PowerPulsar_080.zip
+       Author: Raphael (raphael@powerpulsar.com)
+      Release: 0.8.1 (beta, May 11, 1999)
+Compatibility: BeOS R5 Intel (x86)
+     Location: http://www.powerpulsar.com
+  Description: Outputs psychedelic video effects from music input.
+         Note: Best audio source is from an internal Audio CD ROM.
+               Comes with default add-ons and all the necessary sample code to
+               create your neat effects.
+========================================================================
+
+1-File Content
+--------------
+1) File Content (recursive)
+2) Installation Guide
+3) Disclaimer
+4) Freeware info & request for CD bundlers
+5) Tutorial link
+6) Latest modifications & bugs vs. features list
+
+
+2-Installation Guide
+--------------------
+Unzip all the archive in your prefered location. This will create
+a directory called "PowerPulsar.0.8". Double click the "documentation.html"
+first (I may or may not include the documentation, if yes it is located
+in the documentation folder, if not just browse the net and go to the
+Pulsar home page : http//www.powerpulsar.com ).
+
+Hardware limitations :
+Audio CD ROM and an audio music CD for best usage.
+
+How to run this : install, double click the Pulsar icon, insert an audio CD,
+press the button "Preview" or "Full Screen".
+
+
+3-Disclaimer
+------------
+
+"This software is provided to the user "as is." I makes no warranties, either 
+express or implied, with respect to this software and/or associated materials
+provided to the user, including but not limited to any warranty of
+merchantability, fitness for a particular purpose or against infringement.
+I don't warrant that the functions contained in the software will 
+meet your requirements, or that the operation of the software will be
+uninterrupted or error-free, or that defects in the software will be corrected.  
+Furthermore, I don't warrant or make any representations regarding the use
+or the results of the use of the software or any documentation provided
+herewith in terms of their correctness, accuracy, reliability, or otherwise. 
+No oral or written information or advice given shall create a warranty or
+in any case way increase the scope of this warranty. 
+
+Limitation of liability -- I'm not liable for any claims or damages whatsoever,
+including property damage, personal injury, intellectual property infringement,
+loss of profits, or interruption of business, or for any special, consequential
+or incidental damages, however caused, whether arising out of breach of warranty,
+contract, tort (including negligence),strict liability, or otherwise.
+
+Cope with it."
+
+The author, Raphael <mailto:raphael@powerpulsar.com>
+
+
+4-Freeware info
+----------------
+
+This software is provided as a freeware.
+This freeware is free, but if you like it, you have to encourage me so that
+I continue enhancing the software. You may contribute in a way or another to
+the benefit of this software development or it's author enlightenment.
+Contributions include, but are not limited to, add-ons developments (with
+the implication that its source be publicly available), pack of beers,
+Champagne or free invitation to your teckno parties.
+
+The final version will probably cost $10 or $20 for the full version.
+Some very close friends may argue that this software is my toy-application
+and that it will probably never be finished whatsoever. I'll forgive them.
+Anyway, there will be a Lite version for free. Both the full and the lite
+version will allow you to program external add-ons. In order to encourage
+third-parties to make add-ons, I will maintain a page with the best add-ons
+and their authors will receive the full version for free (I will be the only
+judge of which add-ons are best, and delivered source code with full
+hints/optims and comments will increase an add-on's value :)) -- Well all
+of this is for future, OK ? ;-)
+
+A last note for those who bundle freeware/shareware CDs:
+
+>>>> You're not autorized to put this on a free or public CD-ROM without
+>>>> my written permission, even if you make no money with that CD.
+
+I never refused any friendly note asking for my permission yet ;-)
+
+
+5-Tutorial (not included in this archive)
+----------
+Unpack the archive and double click the "tutorial.html" file in it -- if you
+can find this file, which is not the case on small limited distributions.
+Or go to http://www.powerpulsar.com to see if I did updated it since last year.
+
+Anyway, I did include the guide tour in this revision. It's quite obosolete but
+you'll probably find your way with it.
+
+Sorry for the lack of a real documentation.
+
+Useful keys include:
+- ALT-1...9/0 : load file "configN.pp" (in main window)
+- F1-F12: load file "configN.pp" (during fullscreen or preview)
+- I: invert video mode during fullscreen
+- ESC, Z, Q : exit fullscreen
+- N: Next CD track
+- V: preVious CD track
+- -/+ keypad: volume -/+ (not pluged with new media kit)
+- 0-9 keypad: CD output amplification from 0 to 100%
+
+"config0.pp" is a special config mode. It's the one loaded at startup.
+See the File->Preferences, "Misc" tab to prevent from loading the default config.
+
+In File->Preferences: DO NOT activate the Matrox dual-screen mode nor the
+UMAX-specific mode. These only worked on a BeBox or my UMAX S900 (Mac clone).
+I have actually no idea what will happen with those on a regular PC !
+(probably nothing anyway ;-))
+
+
+6-Latest modifications & bugs vs. features list
+-----------------------------------------------
+
+[11 May 2000]
+- Compiled all addons.
+- Made all sources available for sample code, even if the quality of the
+source for addons is not always optimal.
+- Fixed a bug in the CFilter (was storing a BEntry and 3 BDirectories,
+thus exhausting the file descriptors). Now using BPath or entry_ref.
+- Fixed a bug in the CFilter::loadBitmap in conjunction with MapPlayer,
+now look for image in local and then only in the img directory
+- Fixed the image loader for MapPlayer.
+- Fixed a bug in loadConfig, addons were not terminated.
+
+There are a few minor bugs to fix later:
+- MapPlayer may crash if the app is quited too quickly (cf unload)
+- 4-pixels inversion in the bi-landscape pixel doubler (Big Endian problem)
+- missing facet in the scope3d.
+- landscape addons and others should not erase background. Use flag instead.
+
+
+[03 May 2000]
+Restarted working on this. The windows version did not advanced more anyway.
+Compiled with BeOS 5 PE. Uses the R4/R5 media kit for input. A single connection
+is blindly opened on the first hardware input, i.e. the unique sound card in a
+typical user installation.
+Lacking:
+- menu for selecting media input
+- ability to capture output streams (i.e. CL-amp etc.) seem not be easy
+since media nodes barely support the de/re-connection scheme. What the heck!
+- thus need to directly use the media kit to read MP3 and others recognized
+media files. Need a winamp like interface for that.
+- sometimes switching from preview to fullscreen will not work, i.e. my input
+node won't reconnect. Symptom: fullscreen showing a static sound buffer.
+Fix: exit fullscren, do preview, reclick preview to close it and reopen fullscreen.
+
+
+[1999 comments]
+
+R3 Intel fixes :
+- correct support of IDE drives (thx to Be dev support guys!)
+- endian-free
+
+Version 0.7.6 correct many features.
+- Mainly you can use it with ATI cards and IMS128 cards on Macintosh in fullscreen correctly, I mean with a descent speed and flicker-free.
+- There is a Preference window : play with the options and close the window. The options as used as soon as you change them (options relative to the fullscreen are only used when you stop and restart the fullscreen mode).
+- If you put a Matrox Millenium 2064 as your second video card, it will be correctly handled. I will see later to support any videocard there.
+- Prefs are saved with libpref 1.2.2.
+- You can change the content of the track while you're playing. Usefull in preview mode or when you use two video cards !
+- You can now see the volume change (-/+ keys) or the CD change (n,v keys) on the game kit screen while playing -- you can disable this in the pref/other by unchecking the "use gk sup interface".
+- You can also get rid of the useful frame rate display :-p
+- The add-ons API has been a bit improved. You know need to link against the _APP_. Your addon can now display a view for settings in the info window -- check the fft2 sample code for an example of ... well see yourself, guess and then ask me.
+- Don't care but I will change the addon API soon :-) I have bunch of things to add to them :-)
+- There are many others improvements but I can't remember them all right now. And I have bunch of things to code so just stay tuned.
+
+Happy Rave !!
+
+-- eof
+

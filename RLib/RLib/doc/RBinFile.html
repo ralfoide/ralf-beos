@@ -1,0 +1,69 @@
+<html><head><TITLE>RBinFile</TITLE></head>
+<body>
+<H2><A HREF ="#DOC.DOCU" > <IMG BORDER=0 SRC=down.gif></A>  class  RBinFile : public <!1><A HREF="RIBin.html">RIBin</A> </H2><BLOCKQUOTE>
+Binary File class
+</BLOCKQUOTE>
+<hr>
+ <h2> Inheritance:</h2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CRIBin,MRIBin.html,CRBinFile,MRBinFile.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</APPLET>
+<hr><H3>Inherited from <A HREF="RIBin.html">RIBin:</A></h3>
+
+<DL>
+<DL>
+<DT><h3>Public Methods</h3><DD><DT><IMG SRC=icon2.gif> virtual  rbool  <B>Open</B>(const sptr path, <!1><A HREF="EFileMode.html">EFileMode</A> mode)
+<DT><IMG SRC=icon2.gif> virtual  rbool  <B>Open</B>(const <!1><A HREF="RPath.html">RPath</A> &amp;path, <!1><A HREF="EFileMode.html">EFileMode</A> mode)
+<DT><IMG SRC=icon2.gif> virtual  void  <B>Close</B>(void)
+<DT><IMG SRC=icon2.gif> virtual  void  <B>Rewind</B>(void)
+<DT><IMG SRC=icon2.gif> virtual  rbool  <B>Seek</B>(si32 position, <!1><A HREF="EFileSeek.html">EFileSeek</A> mode = kFileSeekSet)
+<DT><IMG SRC=icon2.gif> virtual  si32  <B>Tell</B>(void)
+<DT><IMG SRC=icon2.gif> virtual  rbool  <B>Eof</B>(void)
+<DT><IMG SRC=icon2.gif> virtual  si32  <B>Size</B>(void)
+<DT><IMG SRC=icon2.gif> virtual  rbool  <B>Read</B>(char *buffer, si32 size)
+<DT><IMG SRC=icon2.gif> virtual  rbool  <B>Write</B>(char *buffer, si32 size)
+<DT><IMG SRC=icon2.gif> ui8  <B>Read8</B>(void)
+<DT><IMG SRC=icon2.gif> ui16  <B>Read16LE</B>(void)
+<DT><IMG SRC=icon2.gif> ui16  <B>Read16BE</B>(void)
+<DT><IMG SRC=icon2.gif> ui32  <B>Read32LE</B>(void)
+<DT><IMG SRC=icon2.gif> ui32  <B>Read32BE</B>(void)
+<DT><IMG SRC=icon2.gif> fp32  <B>ReadFpLE</B>(void)
+<DT><IMG SRC=icon2.gif> fp32  <B>ReadFpBE</B>(void)
+<DT><IMG SRC=icon2.gif> rbool  <B>ReadCheck8</B>(ui8 &amp;b)
+<DT><IMG SRC=icon2.gif> rbool  <B>ReadCheck16LE</B>(ui16 &amp;w)
+<DT><IMG SRC=icon2.gif> rbool  <B>ReadCheck16BE</B>(ui16 &amp;w)
+<DT><IMG SRC=icon2.gif> rbool  <B>ReadCheck32LE</B>(ui32 &amp;w)
+<DT><IMG SRC=icon2.gif> rbool  <B>ReadCheck32BE</B>(ui32 &amp;w)
+<DT><IMG SRC=icon2.gif> rbool  <B>ReadCheckFpLE</B>(fp32 &amp;f)
+<DT><IMG SRC=icon2.gif> rbool  <B>ReadCheckFpBE</B>(fp32 &amp;f)
+<DT><IMG SRC=icon2.gif> rbool  <B>Write8</B>(ui8)
+<DT><IMG SRC=icon2.gif> rbool  <B>Write16LE</B>(ui16)
+<DT><IMG SRC=icon2.gif> rbool  <B>Write16BE</B>(ui16)
+<DT><IMG SRC=icon2.gif> rbool  <B>Write32LE</B>(ui32)
+<DT><IMG SRC=icon2.gif> rbool  <B>Write32BE</B>(ui32)
+<DT><IMG SRC=icon2.gif> rbool  <B>WriteFpLE</B>(fp32)
+<DT><IMG SRC=icon2.gif> rbool  <B>WriteFpBE</B>(fp32)
+<DT><IMG SRC=icon2.gif> virtual  void  <B>PrintToStream</B>(const sptr name = NULL)
+</DL></DL>
+<A NAME="DOC.DOCU">
+<hr>
+ <h2> Documentation </h2>
+<BLOCKQUOTE>
+Binary File class.
+Implemented over FILE * for the C stdlib
+or FSSpec/DataFork for MacOS.
+
+</BLOCKQUOTE>
+<DL>
+</DL>
+<hr>
+ <DL><DT><B>This class has no child classes.</B></DL>
+<DL></DL><P><I><A HREF="aindex.html"> alphabetic index</A></I>  <I><A HREF="HIER.html"> hierarchy of classes</A></I><P><hr>
+<A HREF="http://www.zib.de/Visual/software/doc++/index.html"><IMG BORDER=0 ALIGN=RIGHT SRC=logo.gif></A>
+<P Align=Center><I>this page has been generated automatically by doc++</I>
+<P Align=Center><I>(c)opyright by <A HREF="http://www.zib.de/zoeckler/"> Malte  Z&ouml;ckler</A>, <A HREF="mailto:wunderling@zib.de"> Roland Wunderling </A><br>contact: <A HREF="mailto:doc++@zib.de"> doc++@zib.de</a></I>
+</BODY>

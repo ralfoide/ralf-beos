@@ -1,0 +1,79 @@
+<html><head><TITLE>RGenApp</TITLE></head>
+<body>
+<H2><A HREF ="#DOC.DOCU" > <IMG BORDER=0 SRC=down.gif></A>  class  RGenApp  </H2><BLOCKQUOTE>
+
+RGenApp is an interface (abstract class) defining a generic basis
+for RApp
+</BLOCKQUOTE>
+<hr>
+
+<DL>
+<DL>
+<DT><h3>Public Methods</h3><DD><DT><A HREF="#DOC.11.3"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  <B>~RGenApp</B>(void) </B>
+ <DD><I> Virtual destructor, does nothing</I>
+<DT><A HREF="#DOC.11.4"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  void  <B>AboutRequested</B>(void) </B>
+ <DD><I> Callback to display an about box</I>
+<DT><A HREF="#DOC.11.5"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  void  <B>Init</B>(void) </B>
+ <DD><I> Called to initialize the instance of the application, just after construction.</I>
+<DT><A HREF="#DOC.11.6"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  void  <B>Terminate</B>(void) </B>
+ <DD><I> Called once the app as quit, before the instance is destroyed.</I>
+<DT><A HREF="#DOC.11.1"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  void  <B>ProcessMessage</B>(ui32 msg, ui32 lparam, vptr data, ui32 *channel=NULL) </B>
+ <DD><I>Process one msg in the main app loop</I>
+<DT><A HREF="#DOC.11.2"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  void  <B>OpenDocument</B>(<!1><A HREF="RPath.html">RPath</A> &amp;path, rbool last=true) </B>
+ <DD><I>Process one system request to open a document</I>
+</DL></DL>
+<A NAME="DOC.DOCU">
+<hr>
+ <h2> Documentation </h2>
+<BLOCKQUOTE>
+
+RGenApp is an interface (abstract class) defining a generic basis
+for RApp
+
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="~RGenApp">
+<A NAME ="DOC.11.3">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  ~RGenApp(void)</B></TT>
+<DD> Virtual destructor, does nothing
+<DL></DL><P>
+<A NAME="AboutRequested">
+<A NAME ="DOC.11.4">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  void  AboutRequested(void)</B></TT>
+<DD> Callback to display an about box
+<DL></DL><P>
+<A NAME="Init">
+<A NAME ="DOC.11.5">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  void  Init(void)</B></TT>
+<DD> Called to initialize the instance of the application, just after construction.
+<DL></DL><P>
+<A NAME="Terminate">
+<A NAME ="DOC.11.6">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  void  Terminate(void)</B></TT>
+<DD> Called once the app as quit, before the instance is destroyed.
+<DL></DL><P>
+<A NAME="ProcessMessage">
+<A NAME ="DOC.11.1">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  void  ProcessMessage(ui32 msg, ui32 lparam, vptr data, ui32 *channel=NULL)</B></TT>
+<DD>Process one msg in the main app loop.
+Note that the inherent flaw in the lack of allocation policy for the data block.
+
+<DL><DT><B>Parameters:</B><DD><B>msg</B> - 		the msg id to be processed
+<br><B>lparam</B> - 	a long value associated with the message
+<br><B>data</B> - 		a pointer onto a data block
+<br><B>channel</B> - 	a pointer onto a socket channel id, used for networking communication<br></DL><P>
+<A NAME="OpenDocument">
+<A NAME ="DOC.11.2">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  void  OpenDocument(<!1><A HREF="RPath.html">RPath</A> &amp;path, rbool last=true)</B></TT>
+<DD>Process one system request to open a document
+<DL><DT><B>Parameters:</B><DD><B>path</B> - 	the path of the document to be open
+<br><B>last</B> - 	indicates if this is the last document to be open
+when multiple documents are requested to be open.<br></DL><P></DL>
+<hr>
+ <DL><DT><B>This class has no child classes.</B></DL>
+<DL></DL><P><I><A HREF="aindex.html"> alphabetic index</A></I>  <I><A HREF="HIER.html"> hierarchy of classes</A></I><P><hr>
+<A HREF="http://www.zib.de/Visual/software/doc++/index.html"><IMG BORDER=0 ALIGN=RIGHT SRC=logo.gif></A>
+<P Align=Center><I>this page has been generated automatically by doc++</I>
+<P Align=Center><I>(c)opyright by <A HREF="http://www.zib.de/zoeckler/"> Malte  Z&ouml;ckler</A>, <A HREF="mailto:wunderling@zib.de"> Roland Wunderling </A><br>contact: <A HREF="mailto:doc++@zib.de"> doc++@zib.de</a></I>
+</BODY>

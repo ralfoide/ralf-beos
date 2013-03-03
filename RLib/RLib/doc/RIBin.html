@@ -1,0 +1,298 @@
+<html><head><TITLE>RIBin</TITLE></head>
+<body>
+<H2><A HREF ="#DOC.DOCU" > <IMG BORDER=0 SRC=down.gif></A>  class  RIBin  </H2><BLOCKQUOTE>
+Interface for manipulating a seekable stream device
+</BLOCKQUOTE>
+<hr>
+ <h2> Inheritance:</h2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CRIBin,MRIBin.html,CRBinFile,MRBinFile.html">
+<param name=before value="M,M^_">
+<param name=after value="M,M">
+<param name=indent value="0,0">
+<param name=arrowdir value="down">
+</APPLET>
+<hr>
+
+<DL>
+<DL>
+<DT><h3>Public Methods</h3><DD><DT><A HREF="#DOC.14.1"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  rbool  <B>Open</B>(const sptr path, <!1><A HREF="EFileMode.html">EFileMode</A> mode) </B>
+ <DD><I>Opens a file for reading or writing</I>
+<DT><A HREF="#DOC.14.2"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  rbool  <B>Open</B>(const <!1><A HREF="RPath.html">RPath</A> &amp;path, <!1><A HREF="EFileMode.html">EFileMode</A> mode) </B>
+ <DD><I>Opens a file for reading or writing</I>
+<DT><A HREF="#DOC.14.3"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  void  <B>Close</B>(void) </B>
+ <DD><I>Closes a previously open file</I>
+<DT><A HREF="#DOC.14.11"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  void  <B>Rewind</B>(void) </B>
+ <DD><I> Rewinds an open file (i.e. seeks to the beginning)</I>
+<DT><A HREF="#DOC.14.4"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  rbool  <B>Seek</B>(si32 position, <!1><A HREF="EFileSeek.html">EFileSeek</A> mode = kFileSeekSet) </B>
+ <DD><I>Seeks to a given position in the file</I>
+<DT><A HREF="#DOC.14.5"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  si32  <B>Tell</B>(void) </B>
+ <DD><I>Reports the current position in the file stream</I>
+<DT><A HREF="#DOC.14.6"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  rbool  <B>Eof</B>(void) </B>
+ <DD><I>Reports if the end of while was reached</I>
+<DT><A HREF="#DOC.14.7"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  si32  <B>Size</B>(void) </B>
+ <DD><I>Reports the size of the file</I>
+<DT><A HREF="#DOC.14.8"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  rbool  <B>Read</B>(char *buffer, si32 size) </B>
+ <DD><I>Reads a bunch of bytes</I>
+<DT><A HREF="#DOC.14.9"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  rbool  <B>Write</B>(char *buffer, si32 size) </B>
+ <DD><I>Writes a bunch of bytes</I>
+<DT><A HREF="#DOC.14.12"> <IMG BORDER=0 SRC=icon1.gif></A> ui8  <B>Read8</B>(void) </B>
+ <DD><I> reads a byte</I>
+<DT><A HREF="#DOC.14.13"> <IMG BORDER=0 SRC=icon1.gif></A> ui16  <B>Read16LE</B>(void) </B>
+ <DD><I> reads a word stored as Little-Endian</I>
+<DT><A HREF="#DOC.14.14"> <IMG BORDER=0 SRC=icon1.gif></A> ui16  <B>Read16BE</B>(void) </B>
+ <DD><I> reads a word stored as Big-Endian</I>
+<DT><A HREF="#DOC.14.15"> <IMG BORDER=0 SRC=icon1.gif></A> ui32  <B>Read32LE</B>(void) </B>
+ <DD><I> reads a long stored as Little-Endian</I>
+<DT><A HREF="#DOC.14.16"> <IMG BORDER=0 SRC=icon1.gif></A> ui32  <B>Read32BE</B>(void) </B>
+ <DD><I> reads a long stored as Big-Endian</I>
+<DT><A HREF="#DOC.14.17"> <IMG BORDER=0 SRC=icon1.gif></A> fp32  <B>ReadFpLE</B>(void) </B>
+ <DD><I> reads a float stored as Little-Endian</I>
+<DT><A HREF="#DOC.14.18"> <IMG BORDER=0 SRC=icon1.gif></A> fp32  <B>ReadFpBE</B>(void) </B>
+ <DD><I> reads a float stored as Big-Endian</I>
+<DT><A HREF="#DOC.14.19"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>ReadCheck8</B>(ui8 &amp;b) </B>
+ <DD><I> reads a byte</I>
+<DT><A HREF="#DOC.14.20"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>ReadCheck16LE</B>(ui16 &amp;w) </B>
+ <DD><I> reads a word stored as Little-Endian</I>
+<DT><A HREF="#DOC.14.21"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>ReadCheck16BE</B>(ui16 &amp;w) </B>
+ <DD><I> reads a word stored as Big-Endian</I>
+<DT><A HREF="#DOC.14.22"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>ReadCheck32LE</B>(ui32 &amp;w) </B>
+ <DD><I> reads a long stored as Little-Endian</I>
+<DT><A HREF="#DOC.14.23"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>ReadCheck32BE</B>(ui32 &amp;w) </B>
+ <DD><I> reads a long stored as Big-Endian</I>
+<DT><A HREF="#DOC.14.24"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>ReadCheckFpLE</B>(fp32 &amp;f) </B>
+ <DD><I> reads a float stored as Little-Endian</I>
+<DT><A HREF="#DOC.14.25"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>ReadCheckFpBE</B>(fp32 &amp;f) </B>
+ <DD><I> reads a float stored as Big-Endian</I>
+<DT><A HREF="#DOC.14.26"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>Write8</B>(ui8) </B>
+ <DD><I> writes a byte</I>
+<DT><A HREF="#DOC.14.27"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>Write16LE</B>(ui16) </B>
+ <DD><I> writes a word stored as Little-Endian</I>
+<DT><A HREF="#DOC.14.28"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>Write16BE</B>(ui16) </B>
+ <DD><I> writes a word stored as Big-Endian</I>
+<DT><A HREF="#DOC.14.29"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>Write32LE</B>(ui32) </B>
+ <DD><I> writes a long stored as Little-Endian</I>
+<DT><A HREF="#DOC.14.30"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>Write32BE</B>(ui32) </B>
+ <DD><I> writes a long stored as Big-Endian</I>
+<DT><A HREF="#DOC.14.31"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>WriteFpLE</B>(fp32) </B>
+ <DD><I> writes a float stored as Little-Endian</I>
+<DT><A HREF="#DOC.14.32"> <IMG BORDER=0 SRC=icon1.gif></A> rbool  <B>WriteFpBE</B>(fp32) </B>
+ <DD><I> writes a float stored as Big-Endian</I>
+<DT><A HREF="#DOC.14.10"> <IMG BORDER=0 SRC=icon1.gif></A> virtual  void  <B>PrintToStream</B>(const sptr name = NULL) </B>
+ <DD><I>Debug printToStream
+</I>
+</DL></DL>
+<A NAME="DOC.DOCU">
+<hr>
+ <h2> Documentation </h2>
+<BLOCKQUOTE>
+Interface for manipulating a seekable stream device.
+Currently only used by RBinFile.
+Should be used by RBinMemory too.
+
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="Open">
+<A NAME ="DOC.14.1">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  rbool  Open(const sptr path, <!1><A HREF="EFileMode.html">EFileMode</A> mode)</B></TT>
+<DD>Opens a file for reading or writing
+<DL><DT><B>Returns:</B><DD>true on success, false on failure to locate
+or open the file.
+<DT><B>Parameters:</B><DD><B>path</B> - 	The ASICZ string path to the file.
+<br><B>mode</B> - 	An open mode.
+<br></DL><P>
+<A NAME="Open">
+<A NAME ="DOC.14.2">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  rbool  Open(const <!1><A HREF="RPath.html">RPath</A> &amp;path, <!1><A HREF="EFileMode.html">EFileMode</A> mode)</B></TT>
+<DD>Opens a file for reading or writing
+<DL><DT><B>Returns:</B><DD>true on success, false on failure to locate
+or open the file.
+<DT><B>Parameters:</B><DD><B>path</B> - 	The RPath path to the file.
+<br><B>mode</B> - 	An open mode.
+<br></DL><P>
+<A NAME="Close">
+<A NAME ="DOC.14.3">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  void  Close(void)</B></TT>
+<DD>Closes a previously open file.
+Must not fail if the file was not open.
+<DL></DL><P>
+<A NAME="Rewind">
+<A NAME ="DOC.14.11">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  void  Rewind(void)</B></TT>
+<DD> Rewinds an open file (i.e. seeks to the beginning)
+<DL></DL><P>
+<A NAME="Seek">
+<A NAME ="DOC.14.4">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  rbool  Seek(si32 position, <!1><A HREF="EFileSeek.html">EFileSeek</A> mode = kFileSeekSet)</B></TT>
+<DD>Seeks to a given position in the file
+<DL><DT><B>Returns:</B><DD>true if seeked successfully, false otherwise.
+<DT><B>Parameters:</B><DD><B>position</B> - 	The position to seek, in bytes.
+<br><B>mode</B> - 		The relative or absolute seek reference mode.
+<br></DL><P>
+<A NAME="Tell">
+<A NAME ="DOC.14.5">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  si32  Tell(void)</B></TT>
+<DD>Reports the current position in the file stream
+<DL><DT><B>Returns:</B><DD>The number of bytes from the beginning of the file.
+</DL><P>
+<A NAME="Eof">
+<A NAME ="DOC.14.6">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  rbool  Eof(void)</B></TT>
+<DD>Reports if the end of while was reached.
+Eof is always reached on an invalid file.
+
+<DL><DT><B>Returns:</B><DD>true if the current position is the end of file. false otherwise.
+</DL><P>
+<A NAME="Size">
+<A NAME ="DOC.14.7">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  si32  Size(void)</B></TT>
+<DD>Reports the size of the file.
+Gets the file size using seek/tell (valid for read-only).
+
+<DL><DT><B>Returns:</B><DD>The size of the file, in bytes.
+</DL><P>
+<A NAME="Read">
+<A NAME ="DOC.14.8">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  rbool  Read(char *buffer, si32 size)</B></TT>
+<DD>Reads a bunch of bytes
+<DL><DT><B>Returns:</B><DD>true if the requested number of bytes was correctly read,
+false if the file was not open, or nothing or less than
+the amount of requested data was actually read.
+<DT><B>Parameters:</B><DD><B>buffer</B> - 	The pointer onto the buffer to put the read data.
+Must be preallocated onto a storage big enough to
+accomodate 'size' bytes; non-NULL pointer.
+<br><B>size</B> - 	The number of bytes to be read from the stream.
+<br></DL><P>
+<A NAME="Write">
+<A NAME ="DOC.14.9">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  rbool  Write(char *buffer, si32 size)</B></TT>
+<DD>Writes a bunch of bytes
+<DL><DT><B>Returns:</B><DD>true if the requested number of bytes was correctly written,
+false if the file was not open, or nothing or less than
+the amount of requested data was actually written.
+<DT><B>Parameters:</B><DD><B>buffer</B> - 	The pointer onto the buffer to get the written data.
+Must be preallocated onto a storage big enough holding
+at least 'size' bytes; non-NULL pointer.
+<br><B>size</B> - 	The number of bytes to be written to the stream.
+<br></DL><P>
+<A NAME="Read8">
+<A NAME ="DOC.14.12">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> ui8  Read8(void)</B></TT>
+<DD> reads a byte
+<DL></DL><P>
+<A NAME="Read16LE">
+<A NAME ="DOC.14.13">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> ui16  Read16LE(void)</B></TT>
+<DD> reads a word stored as Little-Endian
+<DL></DL><P>
+<A NAME="Read16BE">
+<A NAME ="DOC.14.14">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> ui16  Read16BE(void)</B></TT>
+<DD> reads a word stored as Big-Endian
+<DL></DL><P>
+<A NAME="Read32LE">
+<A NAME ="DOC.14.15">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> ui32  Read32LE(void)</B></TT>
+<DD> reads a long stored as Little-Endian
+<DL></DL><P>
+<A NAME="Read32BE">
+<A NAME ="DOC.14.16">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> ui32  Read32BE(void)</B></TT>
+<DD> reads a long stored as Big-Endian
+<DL></DL><P>
+<A NAME="ReadFpLE">
+<A NAME ="DOC.14.17">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> fp32  ReadFpLE(void)</B></TT>
+<DD> reads a float stored as Little-Endian
+<DL></DL><P>
+<A NAME="ReadFpBE">
+<A NAME ="DOC.14.18">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> fp32  ReadFpBE(void)</B></TT>
+<DD> reads a float stored as Big-Endian
+<DL></DL><P>
+<A NAME="ReadCheck8">
+<A NAME ="DOC.14.19">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  ReadCheck8(ui8 &amp;b)</B></TT>
+<DD> reads a byte
+<DL></DL><P>
+<A NAME="ReadCheck16LE">
+<A NAME ="DOC.14.20">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  ReadCheck16LE(ui16 &amp;w)</B></TT>
+<DD> reads a word stored as Little-Endian
+<DL></DL><P>
+<A NAME="ReadCheck16BE">
+<A NAME ="DOC.14.21">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  ReadCheck16BE(ui16 &amp;w)</B></TT>
+<DD> reads a word stored as Big-Endian
+<DL></DL><P>
+<A NAME="ReadCheck32LE">
+<A NAME ="DOC.14.22">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  ReadCheck32LE(ui32 &amp;w)</B></TT>
+<DD> reads a long stored as Little-Endian
+<DL></DL><P>
+<A NAME="ReadCheck32BE">
+<A NAME ="DOC.14.23">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  ReadCheck32BE(ui32 &amp;w)</B></TT>
+<DD> reads a long stored as Big-Endian
+<DL></DL><P>
+<A NAME="ReadCheckFpLE">
+<A NAME ="DOC.14.24">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  ReadCheckFpLE(fp32 &amp;f)</B></TT>
+<DD> reads a float stored as Little-Endian
+<DL></DL><P>
+<A NAME="ReadCheckFpBE">
+<A NAME ="DOC.14.25">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  ReadCheckFpBE(fp32 &amp;f)</B></TT>
+<DD> reads a float stored as Big-Endian
+<DL></DL><P>
+<A NAME="Write8">
+<A NAME ="DOC.14.26">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  Write8(ui8)</B></TT>
+<DD> writes a byte
+<DL></DL><P>
+<A NAME="Write16LE">
+<A NAME ="DOC.14.27">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  Write16LE(ui16)</B></TT>
+<DD> writes a word stored as Little-Endian
+<DL></DL><P>
+<A NAME="Write16BE">
+<A NAME ="DOC.14.28">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  Write16BE(ui16)</B></TT>
+<DD> writes a word stored as Big-Endian
+<DL></DL><P>
+<A NAME="Write32LE">
+<A NAME ="DOC.14.29">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  Write32LE(ui32)</B></TT>
+<DD> writes a long stored as Little-Endian
+<DL></DL><P>
+<A NAME="Write32BE">
+<A NAME ="DOC.14.30">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  Write32BE(ui32)</B></TT>
+<DD> writes a long stored as Big-Endian
+<DL></DL><P>
+<A NAME="WriteFpLE">
+<A NAME ="DOC.14.31">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  WriteFpLE(fp32)</B></TT>
+<DD> writes a float stored as Little-Endian
+<DL></DL><P>
+<A NAME="WriteFpBE">
+<A NAME ="DOC.14.32">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> rbool  WriteFpBE(fp32)</B></TT>
+<DD> writes a float stored as Big-Endian
+<DL></DL><P>
+<A NAME="PrintToStream">
+<A NAME ="DOC.14.10">
+<DT><IMG BORDER=0 SRC=icon2.gif><TT><B> virtual  void  PrintToStream(const sptr name = NULL)</B></TT>
+<DD>Debug printToStream
+
+<DL><DT><B>Parameters:</B><DD><B>name</B> - 	A comment string<br></DL><P></DL>
+<hr>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="RBinFile.html"> RBinFile </A><br>
+</DL>
+<DL></DL><P><I><A HREF="aindex.html"> alphabetic index</A></I>  <I><A HREF="HIER.html"> hierarchy of classes</A></I><P><hr>
+<A HREF="http://www.zib.de/Visual/software/doc++/index.html"><IMG BORDER=0 ALIGN=RIGHT SRC=logo.gif></A>
+<P Align=Center><I>this page has been generated automatically by doc++</I>
+<P Align=Center><I>(c)opyright by <A HREF="http://www.zib.de/zoeckler/"> Malte  Z&ouml;ckler</A>, <A HREF="mailto:wunderling@zib.de"> Roland Wunderling </A><br>contact: <A HREF="mailto:doc++@zib.de"> doc++@zib.de</a></I>
+</BODY>
